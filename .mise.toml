@@ -1,0 +1,18 @@
+[tools]
+node = '20'
+'npm:@marp-team/marp-cli' = 'latest'
+
+[tasks.dev]
+description = 'Start marp-cli in watch mode'
+run = 'marp -w presentation.md -o presentation.html --theme-set ./themes -p'
+
+[tasks.clean]
+description = 'Remove build artifacts'
+run = 'rm ./*.{html,pptx,pdf}'
+
+[tasks.build]
+description = 'Generate complete presentation'
+run = 'marp presentation.md -o presentation.pptx --theme-set ./themes'
+
+[settings]
+experimental = true
