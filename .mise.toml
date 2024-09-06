@@ -14,5 +14,9 @@ run = 'rm ./*.{html,pptx,pdf}'
 description = 'Generate complete presentation'
 run = 'marp presentation.md -o presentation.pptx --theme-set ./themes'
 
+[tasks.build_site]
+description = 'Generate complete presentation as index.html'
+run = 'marp presentation.md -o index.html --theme-set ./themes'
+
 [settings]
 experimental = true
